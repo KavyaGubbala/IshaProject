@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Suite">
+
+	<test name="Test P1_1VerifyBannerLoginBtn">
+
+		<!-- <parameter name="version" value="112" /> <parameter name="platform" 
+			value="Windows 11" /> -->
+		<!-- <parameter name="env" value="uat" /> <parameter name="browser" value="Chrome" 
+			/> -->
+		<parameter name="lambdacredentailssheet" value="Credentials" />
+		<parameter name="env" value="UAT" />
+		<parameter name="region" value="US" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="version" value="112" />
+		<parameter name="platform" value="Windows 10" />
+
+		<classes>
+			<class name="base.BaseClass" />
+			<!-- <class name="testcase.P1_1VerifyBannerLoginBtn" /> -->
+			<!-- <class name="testcase.P1_2VerifyRegionLangSwitchr" /> -->
+			<!-- <class name="testcase.P1_3VerifyBannerRegistrnBtn" /> -->
+			<!-- <class name="testcase.P1_4VerifyStickyCTA"/> -->
+			<!-- <class name="testcase.P1_5VerifyPrgmFeeUI"/> -->
+			<!--  <class name="testcase.P1_6VerifyLangSwitchr" />-->
+			<class name="testcase.P1_7VerifyContinueBtn"/> 
+			<!-- <class name="testcase.P1_8VerifyEnrollBtn" /> -->
+			<!-- <class name="testcase.P1_9VerifyAttendInPersLink" /> -->
+			<!-- <class name="testcase.P1_10VerifyIshaSupportLink" /> -->
+			<!-- <class name="Phase2_Testcases.P2_1_VerifyFullRegistratnIndia" /> -->
+			<!-- <class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas" /> -->
+
+		<!--  	<class name="testcase.P1_1VerifyBannerLoginBtn" />
+			<class name="testcase.P1_2VerifyRegionLangSwitchr" />
+			<class name="testcase.P1_3VerifyBannerRegistrnBtn" />
+			<class name="testcase.P1_4VerifyStickyCTA" />
+			<class name="testcase.P1_5VerifyPrgmFeeUI" />
+			<class name="testcase.P1_6VerifyLangSwitchr" />
+			<class name="testcase.P1_7VerifyContinueBtn" />
+			<class name="testcase.P1_8VerifyEnrollBtn" />
+			<class name="testcase.P1_9VerifyAttendInPersLink" />
+			<class name="testcase.P1_10VerifyIshaSupportLink" />-->
+		</classes>
+	</test>
+
+
+
+
+
+
+</suite> 

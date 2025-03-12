@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test parallel="tests" name="Test P1_1VerifyBannerLoginBtn(failed)">
+    <parameter name="browser" value="Edge"/>
+    <parameter name="env" value="UAT"/>
+    <parameter name="region" value="US"/>
+    <parameter name="lambdacredentailssheet" value="Credentials"/>
+    <parameter name="version" value="112"/>
+    <parameter name="platform" value="Windows 10"/>
+    <classes>
+      <class name="testcase.P1_7VerifyContinueBtn">
+        <methods>
+          <include name="setup"/>
+          <include name="testPriotity1"/>
+        </methods>
+      </class> <!-- testcase.P1_7VerifyContinueBtn -->
+      <class name="testcase.P1_9VerifyAttendInPersLink">
+        <methods>
+          <include name="testPriotity1"/>
+        </methods>
+      </class> <!-- testcase.P1_9VerifyAttendInPersLink -->
+      <class name="testcase.P1_8VerifyEnrollBtn">
+        <methods>
+          <include name="testPriotity1"/>
+        </methods>
+      </class> <!-- testcase.P1_8VerifyEnrollBtn -->
+      <class name="testcase.P1_10VerifyIshaSupportLink">
+        <methods>
+          <include name="testPriotity1"/>
+        </methods>
+      </class> <!-- testcase.P1_10VerifyIshaSupportLink -->
+      <class name="testcase.P1_3VerifyBannerRegistrnBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_3VerifyBannerRegistrnBtn -->
+      <class name="testcase.P1_1VerifyBannerLoginBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_1VerifyBannerLoginBtn -->
+      <class name="testcase.P1_6VerifyLangSwitchr">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_6VerifyLangSwitchr -->
+      <class name="testcase.P1_2VerifyRegionLangSwitchr">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_2VerifyRegionLangSwitchr -->
+      <class name="testcase.P1_4VerifyStickyCTA">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="setup"/>
+          <include name="testPriotity1"/>
+        </methods>
+      </class> <!-- testcase.P1_4VerifyStickyCTA -->
+    </classes>
+  </test> <!-- Test P1_1VerifyBannerLoginBtn(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,11 @@
+testcase\P1_3VerifyBannerRegistrnBtn.class
+util\ExcelUtility.class
+base\BaseClass.class
+pageobjects\IE_Home_PageElements.class
+pageobjects\Overseas_HomePage_Elements.class
+pageobjects\IE_Payment_Page_Elements.class
+Phase2_Testcases\P2_3VerifyFullRegistratnOverseas.class
+testcase\P1_2VerifyRegionLangSwitchr.class
+testcase\P1_1VerifyBannerLoginBtn.class
+testcase\P1_4VerifyStickyCTA.class
+Phase2_Testcases\P2_1_VerifyFullRegistratnIndia.class
