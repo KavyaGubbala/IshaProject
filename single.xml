@@ -22,8 +22,8 @@
 			<!-- <class name="testcase.P1_3VerifyBannerRegistrnBtn" /> -->
 			<!-- <class name="testcase.P1_4VerifyStickyCTA"/> -->
 			<!-- <class name="testcase.P1_5VerifyPrgmFeeUI"/> -->
-			<!--  <class name="testcase.P1_6VerifyLangSwitchr" />-->
-			<class name="testcase.P1_7VerifyContinueBtn"/> 
+			 <class name="testcase.P1_6VerifyLangSwitchr" />
+			<!--<class name="testcase.P1_7VerifyContinueBtn"/> -->
 			<!-- <class name="testcase.P1_8VerifyEnrollBtn" /> -->
 			<!-- <class name="testcase.P1_9VerifyAttendInPersLink" /> -->
 			<!-- <class name="testcase.P1_10VerifyIshaSupportLink" /> -->
