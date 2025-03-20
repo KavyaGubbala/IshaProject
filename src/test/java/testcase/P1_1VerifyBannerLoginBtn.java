@@ -12,7 +12,7 @@ import pageobjects.IE_Home_PageElements;
 public class P1_1VerifyBannerLoginBtn extends BaseClass {
 	// WebDriver driver;
 	@Test
-	public void testPriority1() throws InterruptedException {
+	public void BannerLoginBtn_TestCase() throws InterruptedException {
 		System.out.println("####### TC1 ########");
 		System.out.println("Verifying Banner Login button functionality");
 		//driver.manage().window().maximize();
@@ -42,7 +42,7 @@ public class P1_1VerifyBannerLoginBtn extends BaseClass {
 		// Switch back to the parent window
 		driver.switchTo().window(parent);
 		Assert.assertEquals("Inner Engineering | Shambhavi Mahamudra Kriya | Offered by Sadhguru" , driver.getTitle());
-		System.out.println("Test Passed!");
+		//System.out.println("Test Passed!");
 	}
 
 }

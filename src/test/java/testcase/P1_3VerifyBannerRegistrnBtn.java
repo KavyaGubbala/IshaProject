@@ -30,7 +30,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class P1_3VerifyBannerRegistrnBtn extends BaseClass {
 
 	@Test
-	public void testPriotity1() throws InterruptedException {
+	public void BannerRegisterBtnTestcase() throws InterruptedException {
 		// TC3
 		System.out.println("####### TC3 ########");
 		System.out.println("Verify Banner Register now button functionality");

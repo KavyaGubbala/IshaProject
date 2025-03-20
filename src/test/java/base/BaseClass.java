@@ -1,6 +1,8 @@
 package base;
 
 import java.io.File;
+
+import org.testng.ITestResult;
 import java.util.Optional;
 import java.util.Set;
 import java.io.FileInputStream;
@@ -23,6 +25,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,9 +38,11 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
+
 import org.testng.ITestContext;
 import org.testng.annotations.*;
 
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import util.ExcelUtility;
 
 public class BaseClass {
@@ -50,6 +55,8 @@ public class BaseClass {
 	protected String testdatapath;
 	protected String[] LambdaCredentials;
 	protected String region;
+	protected String sheetName;
+	private String testStatus = "passed";
 	Calendar rightNow = Calendar.getInstance();
 	int hour = rightNow.get(Calendar.HOUR_OF_DAY);
 	int min = rightNow.get(Calendar.MINUTE);
@@ -341,6 +348,7 @@ public class BaseClass {
 		usrdir = System.getProperty("user.dir");
 		testdatapath = usrdir + "\\src\\test\\resources\\TestData.xlsx";
 		this.region = region;
+		this.sheetName = sheetName;
 
 		LambdaCredentials = ExcelUtility.getLambdaTestCredentials(testdatapath, LambdaCredentialsSheet);
 		String userName = LambdaCredentials[0];
@@ -387,12 +395,26 @@ public class BaseClass {
 			}
 			System.out.println("The driver setup process is completed using BeforeSuite");
 		} else if (browser.equalsIgnoreCase("firefox")) {
+			// System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
+			// "/Drivers/geckodriver.exe");
+			// WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			options.addPreference("privacy.trackingprotection.enabled", false);
+			options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+			options.addArguments("--start-maximized");
+			options.addArguments("--disable-blink-features=AutomationControlled"); // Bypass anti-bot detection
+			// options.setHeadless(false); // Set to true if testing in headless mode
+			options.addArguments("--headless=new");
 
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(options);
+
+			// driver.switchTo().frame(0);
 		} else if (browser.equalsIgnoreCase("edge")) {
 
 			driver = new EdgeDriver();
-		} else {
+		}
+
+		else {
 			throw new IllegalArgumentException("Invalid browser name provided!");
 		}
 
@@ -404,12 +426,36 @@ public class BaseClass {
 
 	}
 
+	@AfterMethod
+	public void captureTestStatus(ITestResult result) {
+		if (result.getStatus() == ITestResult.FAILURE) {
+			testStatus = "failed";
+		}
+	}
+
 	@AfterClass
 	public void closeDriver() {
+//		if (driver != null) {
+//			JavascriptExecutor jse = (JavascriptExecutor) driver;
+//
+//			if (result.getStatus() == ITestResult.FAILURE) {
+//				jse.executeScript("lambda-status=failed");
+//			} else if (result.getStatus() == ITestResult.SUCCESS) {
+//				jse.executeScript("lambda-status=passed");
+//			}
+
 		if (driver != null) {
-			driver.quit();
-			System.out.println("Driver quit successfully");
+			try {
+				JavascriptExecutor jse = (JavascriptExecutor) driver;
+				jse.executeScript("lambda-status=" + testStatus);
+			} catch (Exception e) {
+				System.out.println("Error setting LambdaTest status: " + e.getMessage());
+			} finally {
+				driver.quit();
+				System.out.println("Driver quit successfully");
+			}
 		}
+
 	}
 
 	public void popup() throws InterruptedException {
@@ -445,10 +491,11 @@ public class BaseClass {
 
 			// Retrieve and print popup text
 			String popupText = driver.findElement(By.xpath("//*[@id='isPasted']/span[1]")).getText();
-			System.out.println("Nurtue popup Text:- "+ popupText);
+			System.out.println("Nurtue popup Text:- " + popupText);
 
 			// Click the close button on the popup
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='om-ugpkop8dbcgry3vdauf7-yesno']/div/button"))).click();
+			wait.until(ExpectedConditions
+					.elementToBeClickable(By.xpath("//*[@id='om-ugpkop8dbcgry3vdauf7-yesno']/div/button"))).click();
 			System.out.println("Nurture pop up closed");
 
 			// Switch back to main window (only if a new window was opened)
@@ -458,19 +505,19 @@ public class BaseClass {
 			System.out.println("Checking for Exit Popup...");
 
 			if (!driver.findElements(By.cssSelector("#om-u8welaoz8o8bcqac8osu-yesno")).isEmpty()) {
-			    System.out.println("Exit Popup detected. Closing it...");
-			    
-			    // Wait for Exit popup to be visible
-			    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#om-u8welaoz8o8bcqac8osu-yesno")));
+				System.out.println("Exit Popup detected. Closing it...");
 
-			    // Click the Close button
-			    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#om-u8welaoz8o8bcqac8osu-yesno button"))).click();
-			    System.out.println("Exit Popup closed.");
+				// Wait for Exit popup to be visible
+				wait.until(ExpectedConditions
+						.visibilityOfElementLocated(By.cssSelector("#om-u8welaoz8o8bcqac8osu-yesno")));
+
+				// Click the Close button
+				wait.until(ExpectedConditions
+						.elementToBeClickable(By.cssSelector("#om-u8welaoz8o8bcqac8osu-yesno button"))).click();
+				System.out.println("Exit Popup closed.");
 			} else {
-			    System.out.println("No Exit Popup detected. Continuing execution...");
+				System.out.println("No Exit Popup detected. Continuing execution...");
 			}
-
-
 
 		}
 
@@ -483,23 +530,28 @@ public class BaseClass {
 			Thread.sleep(2000);
 
 			if (!driver.findElements(By.cssSelector("#om-u8welaoz8o8bcqac8osu-yesno")).isEmpty()) {
-			    System.out.println("Exit Popup detected. Closing it...");
-			    
-			    // Wait for Exit popup to be visible
-			    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#om-u8welaoz8o8bcqac8osu-yesno")));
+				System.out.println("Exit Popup detected. Closing it...");
 
-			    // Click the Close button
-			    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#om-u8welaoz8o8bcqac8osu-yesno button"))).click();
-			    System.out.println("Exit Popup closed.");
-			   
+				// Wait for Exit popup to be visible
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				wait.until(ExpectedConditions
+						.visibilityOfElementLocated(By.cssSelector("#om-u8welaoz8o8bcqac8osu-yesno")));
+
+				// Click the Close button
+				wait.until(ExpectedConditions
+						.elementToBeClickable(By.cssSelector("#om-u8welaoz8o8bcqac8osu-yesno button"))).click();
+				System.out.println("Exit Popup closed.");
+
 			} else {
-			    System.out.println("No Exit Popup detected. Continuing execution...");
+				System.out.println("No Exit Popup detected. Continuing execution...");
 			}
 
-			
-
-
+		} else if (region.equalsIgnoreCase("UK")) {
+			String mainWindowId = driver.getWindowHandle();
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//div[@id='uk-cookie']")).click();
+			System.out.println("UK Cookies Pop Up Closed");
+			driver.switchTo().window(mainWindowId);
 		}
 
 	}

@@ -1,13 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- <suite thread-count="1" parallel="tests" name="Suite"> <test name="Test 
+	Phase1_Testcases_CA"> <parameter name="lambdacredentailssheet" value="Credentials" 
+	/> <parameter name="env" value="UAT" /> <parameter name="region" value="CA" 
+	/> <parameter name="browser" value="Edge" /> <parameter name="version" value="112" 
+	/> <parameter name="platform" value="Windows 10" /> <classes> <class name="base.BaseClass" 
+	/> <class name="testcase.P1_1VerifyBannerLoginBtn" /> <class name="testcase.P1_2VerifyRegionLangSwitchr" 
+	/> <class name="testcase.P1_3VerifyBannerRegistrnBtn" /> <class name="testcase.P1_4VerifyStickyCTA" 
+	/> <class name="testcase.P1_5VerifyPrgmFeeUI" /> <class name="testcase.P1_6VerifyLangSwitchr" 
+	/> <class name="testcase.P1_7VerifyContinueBtn" /> <class name="testcase.P1_8VerifyEnrollBtn" 
+	/> <class name="testcase.P1_9VerifyAttendInPersLink" /> <class name="testcase.P1_10VerifyIshaSupportLink" 
+	/> </classes> </test> <test name="Test Phase1_Testcases_US"> <parameter name="lambdacredentailssheet" 
+	value="Credentials" /> <parameter name="env" value="UAT" /> <parameter name="region" 
+	value="US" /> <parameter name="browser" value="Edge" /> <parameter name="version" 
+	value="112" /> <parameter name="platform" value="Windows 10" /> <classes> 
+	<class name="base.BaseClass" /> <class name="testcase.P1_1VerifyBannerLoginBtn" 
+	/> <class name="testcase.P1_2VerifyRegionLangSwitchr" /> <class name="testcase.P1_3VerifyBannerRegistrnBtn" 
+	/> <class name="testcase.P1_4VerifyStickyCTA" /> <class name="testcase.P1_5VerifyPrgmFeeUI" 
+	/> <class name="testcase.P1_6VerifyLangSwitchr" /> <class name="testcase.P1_7VerifyContinueBtn" 
+	/> <class name="testcase.P1_8VerifyEnrollBtn" /> <class name="testcase.P1_9VerifyAttendInPersLink" 
+	/> <class name="testcase.P1_10VerifyIshaSupportLink" /> </classes> </test> 
+	<test name="Test Phase1_Testcases_UK"> <parameter name="lambdacredentailssheet" 
+	value="Credentials" /> <parameter name="env" value="UAT" /> <parameter name="region" 
+	value="UK" /> <parameter name="browser" value="Edge" /> <parameter name="version" 
+	value="112" /> <parameter name="platform" value="Windows 10" /> <classes> 
+	<class name="base.BaseClass" /> <class name="testcase.P1_1VerifyBannerLoginBtn" 
+	/> <class name="testcase.P1_2VerifyRegionLangSwitchr" /> <class name="testcase.P1_3VerifyBannerRegistrnBtn" 
+	/> <class name="testcase.P1_4VerifyStickyCTA" /> <class name="testcase.P1_5VerifyPrgmFeeUI" 
+	/> <class name="testcase.P1_6VerifyLangSwitchr" /> <class name="testcase.P1_7VerifyContinueBtn" 
+	/> <class name="testcase.P1_8VerifyEnrollBtn" /> <class name="testcase.P1_9VerifyAttendInPersLink" 
+	/> <class name="testcase.P1_10VerifyIshaSupportLink" /> </classes> </test> 
+	<test name="Test Phase1_Testcases_IN"> <parameter name="lambdacredentailssheet" 
+	value="Credentials" /> <parameter name="env" value="UAT" /> <parameter name="region" 
+	value="IN" /> <parameter name="browser" value="Edge" /> <parameter name="version" 
+	value="112" /> <parameter name="platform" value="Windows 10" /> <classes> 
+	<class name="base.BaseClass" /> <class name="testcase.P1_1VerifyBannerLoginBtn" 
+	/> <class name="testcase.P1_2VerifyRegionLangSwitchr" /> <class name="testcase.P1_3VerifyBannerRegistrnBtn" 
+	/> <class name="testcase.P1_4VerifyStickyCTA" /> <class name="testcase.P1_5VerifyPrgmFeeUI" 
+	/> <class name="testcase.P1_6VerifyLangSwitchr" /> <class name="testcase.P1_7VerifyContinueBtn" 
+	/> <class name="testcase.P1_8VerifyEnrollBtn" /> <class name="testcase.P1_9VerifyAttendInPersLink" 
+	/> <class name="testcase.P1_10VerifyIshaSupportLink" /> </classes> </test> 
+	</suite> -->
+
 <suite thread-count="1" parallel="tests" name="Suite">
+	<test name="Test Phase1_Testcases_IN">
+		<parameter name="lambdacredentailssheet" value="Credentials" />
+		<parameter name="env" value="UAT" />
+		<parameter name="region" value="IN" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="version" value="112" />
+		<parameter name="platform" value="Windows 10" />
 
-	<test name="Test P1_1VerifyBannerLoginBtn">
+		<classes>
+			<class name="base.BaseClass" />
+			<class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas" />
+			<class name="testcase.P1_1VerifyBannerLoginBtn" />
+			<class name="testcase.P1_2VerifyRegionLangSwitchr" />
+			<class name="testcase.P1_3VerifyBannerRegistrnBtn" />
+			<class name="testcase.P1_4VerifyStickyCTA" />
+			<class name="testcase.P1_5VerifyPrgmFeeUI" />
+			<class name="testcase.P1_6VerifyLangSwitchr" />
+			<class name="testcase.P1_7VerifyContinueBtn" />
+			<class name="testcase.P1_8VerifyEnrollBtn" />
+			<class name="testcase.P1_9VerifyAttendInPersLink" />
+			<class name="testcase.P1_10VerifyIshaSupportLink" />
 
-		<!-- <parameter name="version" value="112" /> <parameter name="platform" 
-			value="Windows 11" /> -->
-		<!-- <parameter name="env" value="uat" /> <parameter name="browser" value="Chrome" 
-			/> -->
+		</classes>
+	</test>
+	<test name="Test Phase1_Testcases_US">
 		<parameter name="lambdacredentailssheet" value="Credentials" />
 		<parameter name="env" value="UAT" />
 		<parameter name="region" value="US" />
@@ -17,20 +77,8 @@
 
 		<classes>
 			<class name="base.BaseClass" />
-			<!-- <class name="testcase.P1_1VerifyBannerLoginBtn" /> -->
-			<!-- <class name="testcase.P1_2VerifyRegionLangSwitchr" /> -->
-			<!-- <class name="testcase.P1_3VerifyBannerRegistrnBtn" /> -->
-			<!-- <class name="testcase.P1_4VerifyStickyCTA"/> -->
-			<!-- <class name="testcase.P1_5VerifyPrgmFeeUI"/> -->
-			 <class name="testcase.P1_6VerifyLangSwitchr" />
-			<!--<class name="testcase.P1_7VerifyContinueBtn"/> -->
-			<!-- <class name="testcase.P1_8VerifyEnrollBtn" /> -->
-			<!-- <class name="testcase.P1_9VerifyAttendInPersLink" /> -->
-			<!-- <class name="testcase.P1_10VerifyIshaSupportLink" /> -->
-			<!-- <class name="Phase2_Testcases.P2_1_VerifyFullRegistratnIndia" /> -->
-			<!-- <class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas" /> -->
-
-		<!--  	<class name="testcase.P1_1VerifyBannerLoginBtn" />
+			<class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas" />
+			<class name="testcase.P1_1VerifyBannerLoginBtn" />
 			<class name="testcase.P1_2VerifyRegionLangSwitchr" />
 			<class name="testcase.P1_3VerifyBannerRegistrnBtn" />
 			<class name="testcase.P1_4VerifyStickyCTA" />
@@ -39,13 +87,130 @@
 			<class name="testcase.P1_7VerifyContinueBtn" />
 			<class name="testcase.P1_8VerifyEnrollBtn" />
 			<class name="testcase.P1_9VerifyAttendInPersLink" />
-			<class name="testcase.P1_10VerifyIshaSupportLink" />-->
+			<class name="testcase.P1_10VerifyIshaSupportLink" />
+
 		</classes>
 	</test>
 
+	<test name="Test Phase1_Testcases_UK">
+		<parameter name="lambdacredentailssheet" value="Credentials" />
+		<parameter name="env" value="UAT" />
+		<parameter name="region" value="UK" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="version" value="112" />
+		<parameter name="platform" value="Windows 10" />
 
+		<classes>
+			<class name="base.BaseClass" />
+			<class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas" />
+			<class name="testcase.P1_1VerifyBannerLoginBtn" />
+			<class name="testcase.P1_2VerifyRegionLangSwitchr" />
+			<class name="testcase.P1_3VerifyBannerRegistrnBtn" />
+			<class name="testcase.P1_4VerifyStickyCTA" />
+			<class name="testcase.P1_5VerifyPrgmFeeUI" />
+			<class name="testcase.P1_6VerifyLangSwitchr" />
+			<class name="testcase.P1_7VerifyContinueBtn" />
+			<class name="testcase.P1_8VerifyEnrollBtn" />
+			<class name="testcase.P1_9VerifyAttendInPersLink" />
+			<class name="testcase.P1_10VerifyIshaSupportLink" />
 
+		</classes>
+	</test>
+	<test name="Test Phase1_Testcases_CA">
+		<parameter name="lambdacredentailssheet" value="Credentials" />
+		<parameter name="env" value="UAT" />
+		<parameter name="region" value="CA" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="version" value="112" />
+		<parameter name="platform" value="Windows 10" />
 
+		<classes>
+			<class name="base.BaseClass" />
+			<class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas" />
+			<class name="testcase.P1_1VerifyBannerLoginBtn" />
+			<class name="testcase.P1_2VerifyRegionLangSwitchr" />
+			<class name="testcase.P1_3VerifyBannerRegistrnBtn" />
+			<class name="testcase.P1_4VerifyStickyCTA" />
+			<class name="testcase.P1_5VerifyPrgmFeeUI" />
+			<class name="testcase.P1_6VerifyLangSwitchr" />
+			<class name="testcase.P1_7VerifyContinueBtn" />
+			<class name="testcase.P1_8VerifyEnrollBtn" />
+			<class name="testcase.P1_9VerifyAttendInPersLink" />
+			<class name="testcase.P1_10VerifyIshaSupportLink" />
 
+		</classes>
+	</test>
+	<test name="Test Phase1_Testcases_SG">
+		<parameter name="lambdacredentailssheet" value="Credentials" />
+		<parameter name="env" value="UAT" />
+		<parameter name="region" value="SG" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="version" value="112" />
+		<parameter name="platform" value="Windows 10" />
 
-</suite> 
+		<classes>
+			<class name="base.BaseClass" />
+			<class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas" />
+			<class name="testcase.P1_1VerifyBannerLoginBtn" />
+			<class name="testcase.P1_2VerifyRegionLangSwitchr" />
+			<class name="testcase.P1_3VerifyBannerRegistrnBtn" />
+			<class name="testcase.P1_4VerifyStickyCTA" />
+			<class name="testcase.P1_5VerifyPrgmFeeUI" />
+			<class name="testcase.P1_6VerifyLangSwitchr" />
+			<class name="testcase.P1_7VerifyContinueBtn" />
+			<class name="testcase.P1_8VerifyEnrollBtn" />
+			<class name="testcase.P1_9VerifyAttendInPersLink" />
+			<class name="testcase.P1_10VerifyIshaSupportLink" />
+
+		</classes>
+	</test>
+	<test name="Test Phase1_Testcases_MY">
+		<parameter name="lambdacredentailssheet" value="Credentials" />
+		<parameter name="env" value="UAT" />
+		<parameter name="region" value="MY" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="version" value="112" />
+		<parameter name="platform" value="Windows 10" />
+
+		<classes>
+			<class name="base.BaseClass" />
+			<class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas" />
+			<class name="testcase.P1_1VerifyBannerLoginBtn" />
+			<class name="testcase.P1_2VerifyRegionLangSwitchr" />
+			<class name="testcase.P1_3VerifyBannerRegistrnBtn" />
+			<class name="testcase.P1_4VerifyStickyCTA" />
+			<class name="testcase.P1_5VerifyPrgmFeeUI" />
+			<class name="testcase.P1_6VerifyLangSwitchr" />
+			<class name="testcase.P1_7VerifyContinueBtn" />
+			<class name="testcase.P1_8VerifyEnrollBtn" />
+			<class name="testcase.P1_9VerifyAttendInPersLink" />
+			<class name="testcase.P1_10VerifyIshaSupportLink" />
+
+		</classes>
+	</test>
+	<test name="Test Phase1_Testcases_Global">
+		<parameter name="lambdacredentailssheet" value="Credentials" />
+		<parameter name="env" value="UAT" />
+		<parameter name="region" value="Global" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="version" value="112" />
+		<parameter name="platform" value="Windows 10" />
+
+		<classes>
+			<class name="base.BaseClass" />
+			<class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas" />
+			<class name="testcase.P1_1VerifyBannerLoginBtn" />
+			<class name="testcase.P1_2VerifyRegionLangSwitchr" />
+			<class name="testcase.P1_3VerifyBannerRegistrnBtn" />
+			<class name="testcase.P1_4VerifyStickyCTA" />
+			<class name="testcase.P1_5VerifyPrgmFeeUI" />
+			<class name="testcase.P1_6VerifyLangSwitchr" />
+			<class name="testcase.P1_7VerifyContinueBtn" />
+			<class name="testcase.P1_8VerifyEnrollBtn" />
+			<class name="testcase.P1_9VerifyAttendInPersLink" />
+			<class name="testcase.P1_10VerifyIshaSupportLink" />
+
+		</classes>
+	</test>
+
+</suite>

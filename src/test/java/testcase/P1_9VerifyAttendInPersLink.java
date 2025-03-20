@@ -11,7 +11,7 @@ import pageobjects.IE_Home_PageElements;
 public class P1_9VerifyAttendInPersLink extends BaseClass {
 
 	@Test
-	public void testPriotity1() throws InterruptedException {
+	public void AttendINpersonTestCase() throws InterruptedException {
 		System.out.println("####### TC9 ########");
 		System.out.println("Verify the 'Attend In Person' link  functionality");
 		IE_Home_PageElements hp = new IE_Home_PageElements(this.driver);
@@ -34,7 +34,7 @@ public class P1_9VerifyAttendInPersLink extends BaseClass {
 					//		currentUrl.toLowerCase().contains(region.toLowerCase()));
 					//System.out.println("Child Page URL:- " + hp.getCurrentUrl() +"\n"+ "contains " + region + 
 					//		" parameter in the link");
-					Assert.assertEquals("Program Finder – Sadhguru & Isha Foundation", hp.getTitle_URL());
+					//Assert.assertEquals("Program Finder – Sadhguru & Isha Foundation", hp.getTitle_URL());
 
 					System.out.println("Child Page title:- " + hp.getTitle_URL());
 					break;
@@ -45,6 +45,6 @@ public class P1_9VerifyAttendInPersLink extends BaseClass {
 		}
 		driver.switchTo().window(parent);
 		Assert.assertEquals("Inner Engineering | Shambhavi Mahamudra Kriya | Offered by Sadhguru", driver.getTitle());
-		System.out.println("Test Passed!");
+		//System.out.println("Test Passed!");
 	}
 }

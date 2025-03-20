@@ -19,16 +19,22 @@ import pageobjects.IE_Home_PageElements;
 public class P1_4VerifyStickyCTA extends BaseClass{
 
 	@Test
-	 public void testPriotity1() throws InterruptedException
+	 public void StickyRegisterCta() throws InterruptedException
 	   {
 		 System.out.println("####### TC4 ########");
 	       System.out.println("Verify Sticky Register now button functionality");
 	       driver.manage().window().maximize();
 	       IE_Home_PageElements hp = new IE_Home_PageElements(this.driver);
 	       Thread.sleep(5000);
-	       hp.clickRegisterStickycta();
+	       if(region.equalsIgnoreCase("IN"))
+	       {
+	    	   hp.clickRegisterStickyctaIN();
+	       }
+	       else {
+	    	   hp.clickRegisterStickyctaOverseas();
+	       }
 	       System.out.println("section heading after clicking on top banner register CTA:- " + hp.enrollHeading_getText());
-	       System.out.println("Test Passed");
+	       //System.out.println("Test Passed");
 		 
 		
 	   }

@@ -8,7 +8,7 @@ import pageobjects.IE_Home_PageElements;
 //reusable testcase for the regions only if the popup is handled
 public class P1_7VerifyContinueBtn extends BaseClass {
 	@Test
-	public void testPriotity1() throws InterruptedException {
+	public void Enroll_ContinuebtnTestcase() throws InterruptedException {
 		System.out.println("####### TC7 ########");
 		System.out.println("Verify the Continue with button functionality");
 		IE_Home_PageElements hp = new IE_Home_PageElements(this.driver);

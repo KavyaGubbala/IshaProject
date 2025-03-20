@@ -40,11 +40,14 @@ public class IE_Home_PageElements {
 	@FindBy(xpath = "//a[@id='ieo-register-banner-btn']")
 	public static WebElement register_bannerbtn;
 	// Register sticky cta
-	@FindBy(xpath = "(//a[@id='ieo-register-sticky-btn'])[2]")
+	@FindBy(id = "ieo-register-sticky-btn")
 	public static WebElement register_Stickycta;
 
-	@FindBy(xpath = "//div[@class='css-12jiv9v']")
+	@FindBy(xpath = "//div[text()='TAKE CHARGE OF YOUR LIFE ']")
 	public static WebElement TakeCharge_Section;
+	
+	@FindBy(xpath="//div[contains(text(),'Millions of people worldwide')]")
+	public static WebElement Overseas_section;
 
 	// Language Switcher
 	@FindBy(xpath = "//button[@id='banner-language-switcher']//span[@class='chakra-button__icon css-1hzyiq5']//*[name()='svg']")
@@ -72,7 +75,9 @@ public class IE_Home_PageElements {
 	@FindBy(xpath = "//button[@id='banner-language-switcher']//div//a")
 	public List<WebElement> overseas_langoptions;
 	@FindBy(xpath = "//a[contains(@href, '/uk/en')]")
-	public  static WebElement lang_dropdwn_en;
+	public  static WebElement lang_dropdwn_english_UK;
+	
+	//@FindBy(xpath="//button[@id='banner-language-switcher']")
 
 	@FindBy(xpath = "//a[contains(@href, '/global/fr')]")
 	public static WebElement lang_dropdwn_fr;
@@ -111,17 +116,36 @@ public class IE_Home_PageElements {
 	//Overseas 
 	@FindBy(xpath = "//p[contains(text(),'English, German, French, Italian, Spanish, Russian')]")
 	public static WebElement Overseas_global_programFeeDescriptionL2;
-	// Price details
-	@FindBy(xpath = "//*[@id='ieo-program-fees']/div/div[1]/div[2]/div[3]/div[1]/div[text()='INR 6500']")
-	public static WebElement price6500;
-	@FindBy(xpath = "//*[@id='ieo-program-fees']/div/div[1]/div[2]/div[3]/div[2]/div[text()='INR 4000']")
-	public static WebElement price4000;
-	@FindBy(xpath = "//*[@id='ieo-program-fees']/div/div[1]/div[2]/div[3]/div[3]/div/h4[text()='Regional Languages']")
-	public static WebElement regionalLanguagesHeader;
-	@FindBy(xpath = "//*[@id='ieo-program-fees']/div/div[1]/div[2]/div[3]/div[4]/div[text()='INR 3500']")
-	public WebElement price3500;
-	@FindBy(xpath = "//*[@id='ieo-program-fees']/div/div[1]/div[2]/div[3]/div[5]/div[text()='INR 2000']")
-	public static WebElement price2000;
+	// Price details India
+//	@FindBy(xpath = "//*[@id='ieo-program-fees']/div/div[1]/div[2]/div[3]/div[1]/div[text()='INR 6500']")
+//	public static WebElement price6500;
+//	@FindBy(xpath = "//*[@id='ieo-program-fees']/div/div[1]/div[2]/div[3]/div[2]/div[text()='INR 4000']")
+//	public static WebElement price4000;
+//	@FindBy(xpath = "//*[@id='ieo-program-fees']/div/div[1]/div[2]/div[3]/div[3]/div/h4[text()='Regional Languages']")
+//	public static WebElement regionalLanguagesHeader;
+//	@FindBy(xpath = "//*[@id='ieo-program-fees']/div/div[1]/div[2]/div[3]/div[4]/div[text()='INR 3500']")
+//	public WebElement price3500;
+//	@FindBy(xpath = "//*[@id='ieo-program-fees']/div/div[1]/div[2]/div[3]/div[5]/div[text()='INR 2000']")
+//	public static WebElement price2000;
+	
+	@FindBy(xpath="//div[@id='in-en-org-price']")
+	public static WebElement oldPriceLocator ;//need to change xpath 
+	@FindBy(xpath="//div[@id='in-en-dis-price']")
+	public static WebElement newPriceLocator;
+	@FindBy(xpath="(//h4[normalize-space()='Regional Languages'])[1]")
+	public static WebElement RegionalLanguagesHeading;
+	@FindBy(xpath="//div[@id='in-ver-org-price']")
+	public static WebElement oldRegionalPriceLocator;
+	@FindBy(xpath="//div[@id='in-ver-dis-price']")
+	public static WebElement newRegionalPriceLocator;
+	
+	//overseas locator
+	@FindBy(xpath="//div[contains(@id, 'org-price')]")
+	public static WebElement overseasOldPriceLocator;
+	@FindBy(xpath="//div[contains(@id, 'dis-price')]")
+	public static WebElement overseasNewPriceLocator;
+	
+	
 
 	// Enroll form langauge switcher
 	@FindBy(xpath = "//button[@id='enroll-language-switcher-btn']")
@@ -204,9 +228,28 @@ public class IE_Home_PageElements {
 	}
 
 ///Clicking register sticky cta
-	public void clickRegisterStickycta() {
+	public void clickRegisterStickyctaIN() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", TakeCharge_Section);
+
+		// Optional: Add a small pause for better visibility
+		try {
+			Thread.sleep(1000); // 1-second pause
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		// Wait for the sticky CTA to become visible
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(register_Stickycta));
+		wait.until(ExpectedConditions.elementToBeClickable(register_Stickycta));
+
+		// Click on the Sticky CTA
+		register_Stickycta.click();
+	}
+	public void clickRegisterStickyctaOverseas() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", Overseas_section);
 
 		// Optional: Add a small pause for better visibility
 		try {
@@ -266,7 +309,7 @@ public class IE_Home_PageElements {
 		}
 	}
 
-	public void clickoverseasLanguageSwitcher() {
+	public void clickOverseasLanguageSwitcher() {
 		wait.until(ExpectedConditions.elementToBeClickable(lang_dropdwn_eng)).click();
 	}
 
@@ -274,11 +317,11 @@ public class IE_Home_PageElements {
 	public void overseas_selectLanguage(String languageName) {
 		// Actions action=new Actions(driver);
 		// action.scrollToElement(enrollHeading).perform();;
-		clickoverseasLanguageSwitcher(); // Open the dropdown
+		//clickOverseasLanguageSwitcher(); // Open the dropdown
 
 		switch (languageName.toLowerCase()) {
 		case "english":
-			wait.until(ExpectedConditions.visibilityOf(lang_dropdwn_en)).click();
+			wait.until(ExpectedConditions.visibilityOf(lang_dropdwn_english_UK)).click();
 			break;
 		case "french":
 			wait.until(ExpectedConditions.visibilityOf(lang_dropdwn_fr)).click();
@@ -300,15 +343,16 @@ public class IE_Home_PageElements {
 		}
 
 	}
+	
 
 	// global regions
 	public void global_selectLanguage(String languageName) {
 	    // Open the language dropdown
-		clickoverseasLanguageSwitcher();
+		//clickOverseasLanguageSwitcher(); 
 
 	    switch (languageName.toLowerCase()) {
 	        case "english":
-	            wait.until(ExpectedConditions.visibilityOf(lang_dropdwn_en)).click();
+	            wait.until(ExpectedConditions.visibilityOf(lang_dropdwn_eng)).click();
 	            break;
 	        case "french":
 	            wait.until(ExpectedConditions.visibilityOf(lang_dropdwn_fr)).click();
@@ -345,8 +389,8 @@ public class IE_Home_PageElements {
 	/// Program Fee section headings
 	// Method to get program fee heading text
 	public String getProgramFeeHeading() {
-		Actions actions = new Actions(driver);
-		actions.scrollToElement(programFeeHeading);
+		//Actions actions = new Actions(driver);
+		//actions.scrollToElement(programFeeHeading);
 		return programFeeHeading.getText();
 	}
 
@@ -358,11 +402,11 @@ public class IE_Home_PageElements {
 	}
 
 	// Verify all elements are displayed
-	public boolean verifyIndiaProgramFeeElements() {
-		return programFeeHeading.isDisplayed() && programFeeDescriptionL1.isDisplayed()
-				&& India_programFeeDescriptionL2.isDisplayed() && price6500.isDisplayed() && price4000.isDisplayed()
-				&& regionalLanguagesHeader.isDisplayed() && price3500.isDisplayed() && price2000.isDisplayed();
-	}
+//	public boolean verifyIndiaProgramFeeElements() {
+//		return programFeeHeading.isDisplayed() && programFeeDescriptionL1.isDisplayed()
+//				&& India_programFeeDescriptionL2.isDisplayed() && price6500.isDisplayed() && price4000.isDisplayed()
+//				&& regionalLanguagesHeader.isDisplayed() && price3500.isDisplayed() && price2000.isDisplayed();
+//	}
 
 	/// Enroll form language switcher actions actions
 

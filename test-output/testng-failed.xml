@@ -1,66 +1,1729 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test parallel="tests" name="Test P1_1VerifyBannerLoginBtn(failed)">
-    <parameter name="browser" value="Edge"/>
+  <test parallel="tests" name="Test Phase1_Testcases_IN(failed)">
+    <parameter name="browser" value="Chrome"/>
     <parameter name="env" value="UAT"/>
-    <parameter name="region" value="US"/>
+    <parameter name="region" value="IN"/>
     <parameter name="lambdacredentailssheet" value="Credentials"/>
     <parameter name="version" value="112"/>
     <parameter name="platform" value="Windows 10"/>
     <classes>
-      <class name="testcase.P1_7VerifyContinueBtn">
-        <methods>
-          <include name="setup"/>
-          <include name="testPriotity1"/>
-        </methods>
-      </class> <!-- testcase.P1_7VerifyContinueBtn -->
       <class name="testcase.P1_9VerifyAttendInPersLink">
         <methods>
-          <include name="testPriotity1"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- testcase.P1_9VerifyAttendInPersLink -->
-      <class name="testcase.P1_8VerifyEnrollBtn">
-        <methods>
-          <include name="testPriotity1"/>
-        </methods>
-      </class> <!-- testcase.P1_8VerifyEnrollBtn -->
-      <class name="testcase.P1_10VerifyIshaSupportLink">
-        <methods>
-          <include name="testPriotity1"/>
-        </methods>
-      </class> <!-- testcase.P1_10VerifyIshaSupportLink -->
       <class name="testcase.P1_3VerifyBannerRegistrnBtn">
         <methods>
           <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testcase.P1_3VerifyBannerRegistrnBtn -->
-      <class name="testcase.P1_1VerifyBannerLoginBtn">
+      <class name="testcase.P1_7VerifyContinueBtn">
         <methods>
           <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testcase.P1_1VerifyBannerLoginBtn -->
+      </class> <!-- testcase.P1_7VerifyContinueBtn -->
+      <class name="testcase.P1_5VerifyPrgmFeeUI">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_5VerifyPrgmFeeUI -->
+      <class name="testcase.P1_4VerifyStickyCTA">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="StickyRegisterCta"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_4VerifyStickyCTA -->
+      <class name="testcase.P1_10VerifyIshaSupportLink">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_10VerifyIshaSupportLink -->
+      <class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="testPriority1"/>
+        </methods>
+      </class> <!-- Phase2_Testcases.P2_3VerifyFullRegistratnOverseas -->
       <class name="testcase.P1_6VerifyLangSwitchr">
         <methods>
           <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testcase.P1_6VerifyLangSwitchr -->
       <class name="testcase.P1_2VerifyRegionLangSwitchr">
         <methods>
           <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testcase.P1_2VerifyRegionLangSwitchr -->
+      <class name="testcase.P1_8VerifyEnrollBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_8VerifyEnrollBtn -->
+      <class name="testcase.P1_1VerifyBannerLoginBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_1VerifyBannerLoginBtn -->
+    </classes>
+  </test> <!-- Test Phase1_Testcases_IN(failed) -->
+  <test parallel="tests" name="Test Phase1_Testcases_UK(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="env" value="UAT"/>
+    <parameter name="region" value="UK"/>
+    <parameter name="lambdacredentailssheet" value="Credentials"/>
+    <parameter name="version" value="112"/>
+    <parameter name="platform" value="Windows 10"/>
+    <classes>
+      <class name="testcase.P1_9VerifyAttendInPersLink">
+        <methods>
+          <include name="AttendINpersonTestCase"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_9VerifyAttendInPersLink -->
+      <class name="testcase.P1_3VerifyBannerRegistrnBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_3VerifyBannerRegistrnBtn -->
+      <class name="testcase.P1_7VerifyContinueBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_7VerifyContinueBtn -->
+      <class name="testcase.P1_5VerifyPrgmFeeUI">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_5VerifyPrgmFeeUI -->
       <class name="testcase.P1_4VerifyStickyCTA">
         <methods>
           <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
           <include name="setup"/>
-          <include name="testPriotity1"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- testcase.P1_4VerifyStickyCTA -->
+      <class name="testcase.P1_10VerifyIshaSupportLink">
+        <methods>
+          <include name="IshaSupportLinkTestcase"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_10VerifyIshaSupportLink -->
+      <class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="testPriority1"/>
+        </methods>
+      </class> <!-- Phase2_Testcases.P2_3VerifyFullRegistratnOverseas -->
+      <class name="testcase.P1_6VerifyLangSwitchr">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_6VerifyLangSwitchr -->
+      <class name="testcase.P1_2VerifyRegionLangSwitchr">
+        <methods>
+          <include name="TopBannerLangSwitcherTestcase"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_2VerifyRegionLangSwitchr -->
+      <class name="testcase.P1_8VerifyEnrollBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_8VerifyEnrollBtn -->
+      <class name="testcase.P1_1VerifyBannerLoginBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_1VerifyBannerLoginBtn -->
     </classes>
-  </test> <!-- Test P1_1VerifyBannerLoginBtn(failed) -->
+  </test> <!-- Test Phase1_Testcases_UK(failed) -->
+  <test parallel="tests" name="Test Phase1_Testcases_CA(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="env" value="UAT"/>
+    <parameter name="region" value="CA"/>
+    <parameter name="lambdacredentailssheet" value="Credentials"/>
+    <parameter name="version" value="112"/>
+    <parameter name="platform" value="Windows 10"/>
+    <classes>
+      <class name="testcase.P1_9VerifyAttendInPersLink">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_9VerifyAttendInPersLink -->
+      <class name="testcase.P1_3VerifyBannerRegistrnBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_3VerifyBannerRegistrnBtn -->
+      <class name="testcase.P1_7VerifyContinueBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_7VerifyContinueBtn -->
+      <class name="testcase.P1_5VerifyPrgmFeeUI">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_5VerifyPrgmFeeUI -->
+      <class name="testcase.P1_4VerifyStickyCTA">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_4VerifyStickyCTA -->
+      <class name="testcase.P1_10VerifyIshaSupportLink">
+        <methods>
+          <include name="IshaSupportLinkTestcase"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_10VerifyIshaSupportLink -->
+      <class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Phase2_Testcases.P2_3VerifyFullRegistratnOverseas -->
+      <class name="testcase.P1_6VerifyLangSwitchr">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_6VerifyLangSwitchr -->
+      <class name="testcase.P1_8VerifyEnrollBtn">
+        <methods>
+          <include name="EnrollButtonTestcase"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_8VerifyEnrollBtn -->
+      <class name="testcase.P1_2VerifyRegionLangSwitchr">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_2VerifyRegionLangSwitchr -->
+      <class name="testcase.P1_1VerifyBannerLoginBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_1VerifyBannerLoginBtn -->
+    </classes>
+  </test> <!-- Test Phase1_Testcases_CA(failed) -->
+  <test parallel="tests" name="Test Phase1_Testcases_SG(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="env" value="UAT"/>
+    <parameter name="region" value="SG"/>
+    <parameter name="lambdacredentailssheet" value="Credentials"/>
+    <parameter name="version" value="112"/>
+    <parameter name="platform" value="Windows 10"/>
+    <classes>
+      <class name="testcase.P1_9VerifyAttendInPersLink">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_9VerifyAttendInPersLink -->
+      <class name="testcase.P1_3VerifyBannerRegistrnBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_3VerifyBannerRegistrnBtn -->
+      <class name="testcase.P1_7VerifyContinueBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_7VerifyContinueBtn -->
+      <class name="testcase.P1_5VerifyPrgmFeeUI">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_5VerifyPrgmFeeUI -->
+      <class name="testcase.P1_4VerifyStickyCTA">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_4VerifyStickyCTA -->
+      <class name="testcase.P1_10VerifyIshaSupportLink">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_10VerifyIshaSupportLink -->
+      <class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="testPriority1"/>
+        </methods>
+      </class> <!-- Phase2_Testcases.P2_3VerifyFullRegistratnOverseas -->
+      <class name="testcase.P1_6VerifyLangSwitchr">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_6VerifyLangSwitchr -->
+      <class name="testcase.P1_8VerifyEnrollBtn">
+        <methods>
+          <include name="EnrollButtonTestcase"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_8VerifyEnrollBtn -->
+      <class name="testcase.P1_2VerifyRegionLangSwitchr">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_2VerifyRegionLangSwitchr -->
+      <class name="testcase.P1_1VerifyBannerLoginBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_1VerifyBannerLoginBtn -->
+    </classes>
+  </test> <!-- Test Phase1_Testcases_SG(failed) -->
+  <test parallel="tests" name="Test Phase1_Testcases_MY(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="env" value="UAT"/>
+    <parameter name="region" value="MY"/>
+    <parameter name="lambdacredentailssheet" value="Credentials"/>
+    <parameter name="version" value="112"/>
+    <parameter name="platform" value="Windows 10"/>
+    <classes>
+      <class name="testcase.P1_9VerifyAttendInPersLink">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_9VerifyAttendInPersLink -->
+      <class name="testcase.P1_3VerifyBannerRegistrnBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_3VerifyBannerRegistrnBtn -->
+      <class name="testcase.P1_7VerifyContinueBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_7VerifyContinueBtn -->
+      <class name="testcase.P1_5VerifyPrgmFeeUI">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_5VerifyPrgmFeeUI -->
+      <class name="testcase.P1_4VerifyStickyCTA">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_4VerifyStickyCTA -->
+      <class name="testcase.P1_10VerifyIshaSupportLink">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_10VerifyIshaSupportLink -->
+      <class name="testcase.P1_6VerifyLangSwitchr">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="EnrollLangSwitcher_Testcase" invocation-numbers="0"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_6VerifyLangSwitchr -->
+      <class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="testPriority1"/>
+        </methods>
+      </class> <!-- Phase2_Testcases.P2_3VerifyFullRegistratnOverseas -->
+      <class name="testcase.P1_2VerifyRegionLangSwitchr">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_2VerifyRegionLangSwitchr -->
+      <class name="testcase.P1_8VerifyEnrollBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_8VerifyEnrollBtn -->
+      <class name="testcase.P1_1VerifyBannerLoginBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_1VerifyBannerLoginBtn -->
+    </classes>
+  </test> <!-- Test Phase1_Testcases_MY(failed) -->
+  <test parallel="tests" name="Test Phase1_Testcases_Global(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="env" value="UAT"/>
+    <parameter name="region" value="Global"/>
+    <parameter name="lambdacredentailssheet" value="Credentials"/>
+    <parameter name="version" value="112"/>
+    <parameter name="platform" value="Windows 10"/>
+    <classes>
+      <class name="testcase.P1_9VerifyAttendInPersLink">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_9VerifyAttendInPersLink -->
+      <class name="testcase.P1_3VerifyBannerRegistrnBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_3VerifyBannerRegistrnBtn -->
+      <class name="testcase.P1_7VerifyContinueBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_7VerifyContinueBtn -->
+      <class name="testcase.P1_5VerifyPrgmFeeUI">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_5VerifyPrgmFeeUI -->
+      <class name="testcase.P1_4VerifyStickyCTA">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_4VerifyStickyCTA -->
+      <class name="testcase.P1_10VerifyIshaSupportLink">
+        <methods>
+          <include name="IshaSupportLinkTestcase"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_10VerifyIshaSupportLink -->
+      <class name="Phase2_Testcases.P2_3VerifyFullRegistratnOverseas">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="testPriority1"/>
+        </methods>
+      </class> <!-- Phase2_Testcases.P2_3VerifyFullRegistratnOverseas -->
+      <class name="testcase.P1_6VerifyLangSwitchr">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_6VerifyLangSwitchr -->
+      <class name="testcase.P1_2VerifyRegionLangSwitchr">
+        <methods>
+          <include name="TopBannerLangSwitcherTestcase"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_2VerifyRegionLangSwitchr -->
+      <class name="testcase.P1_8VerifyEnrollBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_8VerifyEnrollBtn -->
+      <class name="testcase.P1_1VerifyBannerLoginBtn">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="captureTestStatus"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.P1_1VerifyBannerLoginBtn -->
+    </classes>
+  </test> <!-- Test Phase1_Testcases_Global(failed) -->
 </suite> <!-- Failed suite [Suite] -->

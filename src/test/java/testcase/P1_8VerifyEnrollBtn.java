@@ -12,7 +12,7 @@ import util.ExcelUtility;
 public class P1_8VerifyEnrollBtn extends BaseClass {
 
 	@Test
-	public void testPriotity1() throws InterruptedException, IOException {
+	public void EnrollButtonTestcase() throws InterruptedException, IOException {
 		System.out.println("####### TC7 ########");
 		System.out.println("Verify the Continue with button functionality");
 		usrdir = System.getProperty("user.dir");

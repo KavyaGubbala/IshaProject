@@ -6,6 +6,7 @@ import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -63,34 +64,46 @@ public class Overseas_HomePage_Elements {
 	@FindBy(xpath = "//input[@data-test-id='address1-input']")
 	public static WebElement enter_Address;
 	// better to have id's
-	@FindBy(css = "div[class='tc-content css-9ymd22'] p:nth-child(10)")
-	public static WebElement Terms_Conditons_first_Contentbox;
-	@FindBy(xpath = "//div[7]//div[2]//label[1]//span[1]")
-	public static WebElement Disclaimer_WaiverCheckbox;
-	@FindBy(xpath = "//strong[contains(text(),'I HAVE READ THIS AGREEMENT, FULLY UNDERSTAND ITS T')]")
-	public static WebElement Terms_Conditions_second_Contentbox;
-	@FindBy(xpath = "(//span[@class='chakra-checkbox__control css-1utwllg'])[2]")
-	public static WebElement liabilityWavierCheckbox;
+	//@FindBy(css = "div[class='tc-content css-9ymd22'] p:nth-child(10)")
+//	public static WebElement Terms_Conditons_first_Contentbox;
+//	@FindBy(xpath = "//div[7]//div[2]//label[1]//span[1]")
+//	public static WebElement Disclaimer_WaiverCheckbox;
+//	@FindBy(xpath = "//strong[contains(text(),'I HAVE READ THIS AGREEMENT, FULLY UNDERSTAND ITS T')]")
+//	public static WebElement Terms_Conditions_second_Contentbox;
+//	@FindBy(xpath = "(//span[@class='chakra-checkbox__control css-1utwllg'])[2]")
+//	public static WebElement liabilityWavierCheckbox;
+	
+	@FindBy(xpath="//*[@id='ieo-enroll-section']/div/div/div[2]/div[1]/form/div/div[7]/div[2]/label/span[1]")
+	public static WebElement first_checkbox;
+	
+	@FindBy(xpath="//div[contains(@class,'tc-content')]/p[contains(text(),'jury trial for any Claim that I may assert')]")
+	public static WebElement agreement_container;
+	
+	@FindBy(xpath="//div[@id='ieo-enroll-section']/div/div/div[2]/div[1]/form/div/div[10]/div[2]/label/span[1]")
+	public static WebElement second_checkbox;
+	@FindBy(xpath="//div[contains(@class,'tc-content')]/p[contains(text(),'other participants in Isha Events.')]")
+	public static WebElement second_agreement_container;
+	
 	@FindBy(xpath = "//label[@data-test-id='terms-checkbox']")
-	public static WebElement terms_Checkbox;
+	public static WebElement age_Checkbox;
 	@FindBy(xpath = "//label[@data-test-id='privacy-checkbox']")
 	public static WebElement privacy_Checkbox;
 
 	@FindBy(xpath = "//button[@data-test-id='step2-submit']")
 	public static WebElement pay_Securely_button;
 
-	public void popup() {
-		// overseas
-		Actions actions = new Actions(driver);
-		actions.moveByOffset(10, 10).perform();
-		WebElement popup = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//div[@class='yabucoa-c-canvas Campaign__canvas']"))); // Adjust
-																												// selector
-
-		WebElement closeButton = popup.findElement(By.xpath("//button[@title='Close']"));
-		closeButton.click();
-
-	}
+//	public void popup() {
+//		// overseas
+//		Actions actions = new Actions(driver);
+//		actions.moveByOffset(10, 10).perform();
+//		WebElement popup = wait.until(ExpectedConditions
+//				.visibilityOfElementLocated(By.xpath("//div[@class='yabucoa-c-canvas Campaign__canvas']"))); // Adjust
+//																												// selector
+//
+//		WebElement closeButton = popup.findElement(By.xpath("//button[@title='Close']"));
+//		closeButton.click();
+//
+//	}
 
 	public void click_TopBanner_Gift_button() {
 		TopBanner_Gift_button.click();
@@ -265,40 +278,95 @@ public class Overseas_HomePage_Elements {
 
 	public void click_firstCheckbox() throws InterruptedException {
 		Actions actions = new Actions(driver);
-//		actions.scrollToElement(Terms_Conditons_first_Contentbox);
-		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-		//		Terms_Conditons_first_Contentbox);
+////		actions.scrollToElement(Terms_Conditons_first_Contentbox);
+//		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+//		//		Terms_Conditons_first_Contentbox);
+//
+//		wait.until(ExpectedConditions.elementToBeClickable(Disclaimer_WaiverCheckbox));
+//		//actions.scrollToElement(Disclaimer_WaiverCheckbox);
+//		Thread.sleep(2000);
+//		Disclaimer_WaiverCheckbox.click();
+		String isDisabled = first_checkbox.getAttribute("data-disabled");
+	    System.out.println("Before clicking agreement, checkbox disabled: " + isDisabled);
+	    actions.moveToElement(agreement_container).click().perform();
+	    System.out.println("Clicked on agreement section");
+	    do {
+	        actions.sendKeys(Keys.PAGE_DOWN).perform();
+	        System.out.println("Performed page down");
 
-		wait.until(ExpectedConditions.elementToBeClickable(Disclaimer_WaiverCheckbox));
-		//actions.scrollToElement(Disclaimer_WaiverCheckbox);
-		Thread.sleep(2000);
-		Disclaimer_WaiverCheckbox.click();
+	        try {
+	            Thread.sleep(2000); // Small delay to allow content to load properly
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+
+	        isDisabled = first_checkbox.getAttribute("data-disabled");
+	        System.out.println("After scrolling, checkbox disabled: " + isDisabled);
+
+	    } while (isDisabled != null);  // Keep scrolling until the checkbox is enabled
+
+	    // Click the checkbox once it's enabled
+	    //actions.scrollToElement(pay_Securely_button);
+	    //Thread.sleep(2000);
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].click();", first_checkbox);
+	    //first_checkbox.click();
+	    System.out.println("Clicked on checkbox successfully");
+
+		
 	}
 
 	public void click_secondCheckbox() throws InterruptedException {
 		Actions actions = new Actions(driver);
-		actions.scrollToElement(Terms_Conditions_second_Contentbox);
-		wait.until(ExpectedConditions.elementToBeClickable(liabilityWavierCheckbox));
-		liabilityWavierCheckbox.click();
+//		actions.scrollToElement(Terms_Conditions_second_Contentbox);
+//		wait.until(ExpectedConditions.elementToBeClickable(liabilityWavierCheckbox));
+//		liabilityWavierCheckbox.click();
+		String isDisabled = second_checkbox.getAttribute("data-disabled");
+	    System.out.println("Before clicking agreement, checkbox disabled: " + isDisabled);
+
+	   // Actions actions = new Actions(driver);
+	    actions.moveToElement(second_agreement_container).click().perform();
+	    System.out.println("Clicked on agreement section");
+
+	    do {
+	        actions.sendKeys(Keys.PAGE_DOWN).perform();
+	        System.out.println("Performed PAGE_DOWN");
+
+	        try {
+	            Thread.sleep(2000); // Small delay to allow content to load properly
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+
+	        isDisabled = second_checkbox.getAttribute("data-disabled");
+	        System.out.println("After scrolling, checkbox disabled: " + isDisabled);
+
+	    } while (isDisabled != null); // Continue scrolling until the checkbox is enabled
+
+	    // Click the checkbox using JavaScriptExecutor
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].click();", second_checkbox);
+	    System.out.println("Clicked on checkbox successfully");
+
 	}
 
 	public void click_terms_Checkbox() {
 		Actions actions = new Actions(driver);
-		actions.scrollToElement(terms_Checkbox);
+		actions.scrollToElement(age_Checkbox).build().perform();
 		// wait.until(ExpectedConditions.elementToBeClickable(terms_Checkbox));
-		terms_Checkbox.click();
+		age_Checkbox.click();
 	}
 
 	public void click_privacy_Checkbox() {
 		Actions actions = new Actions(driver);
-		actions.scrollToElement(privacy_Checkbox);
+		actions.scrollToElement(privacy_Checkbox).build().perform();
 		// wait.until(ExpectedConditions.elementToBeClickable(privacy_Checkbox));
 		privacy_Checkbox.click();
 	}
 
 	public void click_PaySecurely() {
 		Actions actions = new Actions(driver);
-		actions.scrollToElement(pay_Securely_button);
+		actions.scrollToElement(pay_Securely_button).build().perform();
 		// wait.until(ExpectedConditions.elementToBeClickable(pay_Securely_button));
 		pay_Securely_button.click();
 	}

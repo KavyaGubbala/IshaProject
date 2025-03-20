@@ -11,7 +11,7 @@ import pageobjects.IE_Home_PageElements;
 public class P1_10VerifyIshaSupportLink extends BaseClass {
 
 	@Test
-	public void testPriotity1() throws InterruptedException {
+	public void IshaSupportLinkTestcase() throws InterruptedException {
 		System.out.println("####### TC10 ########");
 		System.out.println("Verify the 'support.ishafoundation.org' link functionality");
 		IE_Home_PageElements hp = new IE_Home_PageElements(this.driver);
@@ -39,7 +39,7 @@ public class P1_10VerifyIshaSupportLink extends BaseClass {
 
 					}
 					else if(region.equalsIgnoreCase("UK")) {
-						String expectedURL = "https://support.ishafoundation.org/en/support/home"; // Replace with actual expected URL
+						String expectedURL = "https://kb.ishayoga.eu/ie-support/?m=backup"; // Replace with actual expected URL
 						Assert.assertTrue("URL does not match expected value!", currentUrl.contains(expectedURL));
 						Assert.assertEquals("Inner Engineering 7 Steps Support Europe", hp.getTitle_URL());
 					}
@@ -60,6 +60,6 @@ public class P1_10VerifyIshaSupportLink extends BaseClass {
 		// Switch back to the parent window
 		driver.switchTo().window(parent);
 		Assert.assertEquals("Inner Engineering | Shambhavi Mahamudra Kriya | Offered by Sadhguru", driver.getTitle());
-		System.out.println("Test Passed!");
+		//System.out.println("Test Passed!");
 	}
 }

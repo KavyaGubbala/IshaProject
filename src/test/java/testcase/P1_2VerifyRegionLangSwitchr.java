@@ -30,13 +30,13 @@ import pageobjects.IE_Home_PageElements;
 
 public class P1_2VerifyRegionLangSwitchr extends BaseClass {
 	@Test
-	public void testPriotity1() throws InterruptedException {
+	public void TopBannerLangSwitcherTestcase() throws InterruptedException {
 
 		System.out.println("####### TC2 ########");
 		System.out.println("Verify the Language Switcher Functionality for different regions");
 		driver.manage().window().maximize();
 		IE_Home_PageElements hp = new IE_Home_PageElements(this.driver);
-		// Thread.sleep(5000);
+		Thread.sleep(5000);
 		// hp.clickRegister();
 		// hp.openLanguageDropdown();
 		// Thread.sleep(5000);
@@ -88,7 +88,10 @@ public class P1_2VerifyRegionLangSwitchr extends BaseClass {
 			for (String[] lang : ukLanguages) {
 				String languageName = lang[0];
 				String expectedUrl = lang[1];
+				hp.openLanguageDropdown();
+				Thread.sleep(2000);
 				hp.overseas_selectLanguage(languageName);
+				Thread.sleep(3000);
 				String actualUrl = driver.getCurrentUrl();
 				System.out.println("Language: " + languageName);
 				System.out.println("Expected URL should contain: " + expectedUrl);

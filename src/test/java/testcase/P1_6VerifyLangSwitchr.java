@@ -1,16 +1,19 @@
 package testcase;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.Parameters;
 
 import base.BaseClass;
 import pageobjects.IE_Home_PageElements;
+import util.ExcelUtility;
 
 public class P1_6VerifyLangSwitchr extends BaseClass {
 	@Test
 	@Parameters("region")
-	public void testPriority1(String region) throws InterruptedException {
+	public void EnrollLangSwitcher_Testcase(String region) throws InterruptedException, IOException {
 		System.out.println("####### TC6 ########");
 		System.out.println("Verifying Language Switcher functionality in Enroll form");
 		IE_Home_PageElements hp = new IE_Home_PageElements(this.driver);
@@ -80,6 +83,16 @@ public class P1_6VerifyLangSwitchr extends BaseClass {
 //			}
 //		}
 //	}
+		usrdir = System.getProperty("user.dir");
+		testdatapath = usrdir + "\\src\\test\\resources\\TestData.xlsx";
+		String[] prices = ExcelUtility.getProgramFeeDetails(testdatapath, sheetName, region);
+
+		String expectedOldPrice = prices[0];
+		String expectedNewPrice = prices[1];
+		String expectedOldRegionalPrice = prices[2];
+		String expectedNewRegionalPrice = prices[3];
+
+		
 		if (region.equalsIgnoreCase("IN")) {
 			String[] indianLanguages = { "Hindi", "Tamil", "Telugu", "Kannada", "Marathi", "Malayalam", "Bengali",
 					"English" };
@@ -92,9 +105,9 @@ public class P1_6VerifyLangSwitchr extends BaseClass {
 
 				// English price is different
 				if (lang.equalsIgnoreCase("English")) {
-					Assert.assertEquals(price, "INR 4000", "Price mismatch for " + lang);
+					Assert.assertEquals(price, expectedNewPrice, "Price mismatch for " + lang);
 				} else {
-					Assert.assertEquals(price, "INR 2000", "Price mismatch for " + lang);
+					Assert.assertEquals(price,expectedNewRegionalPrice, "Price mismatch for " + lang);
 				}
 
 				// Skip dubbed message validation for Tamil
@@ -111,17 +124,11 @@ public class P1_6VerifyLangSwitchr extends BaseClass {
 					System.out.println("dubbed message is displayed for " + lang);
 				}
 			}
-		} else if (region.equalsIgnoreCase("US") || region.equalsIgnoreCase("CA") || region.equalsIgnoreCase("UK")) {
+		} else {
 			String[] commonLanguages = { "English", "German", "French", "Italian", "Spanish", "Russian",
 					"Simplified Chinese", "Traditional Chinese", "Bahasa Indonesia", "Arabic" };
 
-			String expectedPrice = "";
-			if (region.equalsIgnoreCase("US"))
-				expectedPrice = "USD 175";
-			else if (region.equalsIgnoreCase("CA"))
-				expectedPrice = "CAD 175";
-			else if (region.equalsIgnoreCase("UK"))
-				expectedPrice = "GBP 125";
+			
 
 			for (String lang : commonLanguages) {
 				hp.enroll_selectLanguage(lang);
@@ -130,10 +137,8 @@ public class P1_6VerifyLangSwitchr extends BaseClass {
 				System.out.println("\nSelected Language: " + lang + " | Price: " + price);
 
 				// Verify price update
-				Assert.assertEquals(price, expectedPrice, "Price mismatch for " + lang);
+				Assert.assertEquals(price, expectedNewPrice, "Price mismatch for " + lang);
 			}
-		} else {
-			System.out.println("Region not recognized: " + region);
-		}
+		} 
 	}
 }
