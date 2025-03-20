@@ -1,4 +1,18 @@
 pipeline {
+	 agent any
+    stages {
+        stage('Install Maven') {
+            steps {
+                sh 'apt-get update && apt-get install -y maven'  // For Linux
+                // On Windows: Use Chocolatey or manually install Maven
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn clean test'
+            }
+        }
+    }
     agent {
     node   {
          label 'iso-np-node-1'
