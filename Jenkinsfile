@@ -2,11 +2,16 @@ pipeline {
 	 agent any
     stages {
         stage('Install Maven') {
-            steps {
-                sh 'apt-get update && apt-get install -y maven'  // For Linux
-                // On Windows: Use Chocolatey or manually install Maven
+    steps {
+        script {
+            if (isUnix()) {
+                sh 'apt-get update && apt-get install -y maven'  // Linux
+            } else {
+                bat 'choco install maven'  // Windows (Requires Chocolatey)
             }
         }
+    }
+}
         stage('Build') {
             steps {
                 sh 'mvn clean test'

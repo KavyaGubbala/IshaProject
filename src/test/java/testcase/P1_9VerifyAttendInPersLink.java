@@ -2,7 +2,7 @@ package testcase;
 
 import java.util.Set;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseClass;

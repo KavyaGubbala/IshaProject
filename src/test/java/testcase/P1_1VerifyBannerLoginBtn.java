@@ -2,12 +2,12 @@ package testcase;
 
 import java.util.Set;
 
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
 import pageobjects.IE_Home_PageElements;
+
 // passes if we handle popup
 public class P1_1VerifyBannerLoginBtn extends BaseClass {
 	// WebDriver driver;

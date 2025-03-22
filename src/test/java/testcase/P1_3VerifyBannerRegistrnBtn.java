@@ -14,7 +14,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.*;
 
 import base.BaseClass;
-import junit.framework.Assert;
+
 import pageobjects.IE_Home_PageElements;
 
 import java.io.IOException;
