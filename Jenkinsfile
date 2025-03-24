@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
 	 agent any
     stages {
         stage('Install Maven') {
@@ -78,6 +78,69 @@ post {
         mail bcc: '', body: """'Project: ${env.JOB_NAME} <br/> Build Number: ${env.BUILD_NUMBER} <br/> URL: ${env.BUILD_URL}'""", cc: '', from: '', replyTo: '', subject: "'${currentBuild.result}'", to: 'srinivas.k@ishafoundation.org'
     }
     
-  }*/
+  }
 
+}*/
+
+
+pipeline {
+    agent { label 'iso-np-node-1' }  // Corrected agent definition
+
+    stages {
+        stage('Install Maven') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh 'apt-get update && apt-get install -y maven'  // Linux
+                    } else {
+                        bat 'choco install maven'  // Windows (Requires Chocolatey)
+                    }
+                }
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean test'
+            }
+        }
+
+        stage('Test1') {
+            steps {
+                sh 'mvn test -D suite=single.xml'
+            }
+        }
+
+        /* stage('Test2') {
+            steps {
+                sh 'mvn test -D suite=mobile.xml'
+            }
+        } */
+
+        stage('Email Notification') {
+            steps {
+                emailext (
+                    to: 'aditi.pandey@sadhguru.org',
+                    replyTo: 'aditi.pandey@sadhguru.org',
+                    subject: "Email Report from - '${env.JOB_NAME}'",
+                    body: readFile("target/surefire-reports/emailable-report.html"),
+                    mimeType: 'text/html'
+                )         
+            }
+        }
+    }
+
+    post {
+        always {
+            mail bcc: '', 
+                 body: readFile("target/surefire-reports/emailable-report.html"), 
+                 mimeType: 'text/html',  
+                 from: 'aditi.pandey@sadhguru.org', 
+                 replyTo: '', 
+                 subject: "${env.JOB_NAME} Build#: ${env.BUILD_NUMBER} Console Output: ${env.BUILD_URL}/console", 
+                 to: 'aditi.pandey@sadhguru.org'
+        }  
+    }
 }
+
+
